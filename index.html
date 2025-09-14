@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Architecture Inspector</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Custom scrollbar for a modern look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937; /* gray-800 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4b5563; /* gray-600 */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6b7280; /* gray-500 */
+    }
+    body {
+        background-color: #111827; /* bg-gray-900 */
+    }
+    /* Ensure mermaid diagrams are responsive and fit their container */
+    .mermaid-container svg {
+        max-width: 100%;
+        height: auto;
+        cursor: grab;
+    }
+    .mermaid-container svg:active {
+        cursor: grabbing;
+    }
+    /* Tailwind prose overrides for better readability of AI output */
+    .prose {
+        --tw-prose-body: #d1d5db; /* gray-300 */
+        --tw-prose-headings: #f9fafb; /* gray-50 */
+        --tw-prose-lead: #e5e7eb; /* gray-200 */
+        --tw-prose-links: #67e8f9; /* cyan-300 */
+        --tw-prose-bold: #f9fafb; /* gray-50 */
+        --tw-prose-counters: #9ca3af; /* gray-400 */
+        --tw-prose-bullets: #6b7280; /* gray-500 */
+        --tw-prose-hr: #374151; /* gray-700 */
+        --tw-prose-quotes: #f3f4f6; /* gray-100 */
+        --tw-prose-quote-borders: #4b5563; /* gray-600 */
+        --tw-prose-captions: #9ca3af; /* gray-400 */
+        --tw-prose-code: #67e8f9; /* cyan-300 */
+        --tw-prose-pre-code: #e5e7eb; /* gray-200 */
+        --tw-prose-pre-bg: rgba(31, 41, 55, 0.8); /* gray-800 with opacity */
+        --tw-prose-th-borders: #4b5563; /* gray-600 */
+        --tw-prose-td-borders: #374151; /* gray-700 */
+    }
+  </style>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.1.1",
+      "react-dom/client": "https://aistudiocdn.com/react-dom@^19.1.1/client",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+      "react/": "https://aistudiocdn.com/react@^19.1.1/",
+      "@google/genai": "https://aistudiocdn.com/@google/genai@^1.19.0",
+      "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.1",
+      "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+      "jszip": "https://aistudiocdn.com/jszip@^3.10.1",
+      "mermaid": "https://aistudiocdn.com/mermaid@^11.11.0",
+      "panzoom": "https://aistudiocdn.com/panzoom@^9.4.3"
+    }
+  }
+  </script>
+</head>
+<body class="bg-gray-900">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

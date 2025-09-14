@@ -1,0 +1,5 @@
+{
+  "name": "Architecture Visualizer AI",
+  "description": "An interactive file structure visualizer that uses AI to explain the purpose of each file and directory in a complex microservices project.",
+  "requestFramePermissions": []
+}
