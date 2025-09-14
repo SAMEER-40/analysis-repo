@@ -131,6 +131,25 @@ export const MermaidDiagram: React.FC<MermaidDiagramProps> = ({ chart }) => {
             </div>
             {/* Controls */}
             <div className="absolute bottom-3 right-3 flex items-center gap-2 bg-gray-900/70 border border-gray-700 rounded-lg p-1">
+                {/* Info Button */}
+                <div className="relative group flex items-center">
+                    <button className="p-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md" aria-describedby="info-tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div 
+                        id="info-tooltip"
+                        role="tooltip"
+                        className="absolute bottom-full right-0 mb-2 w-max max-w-xs bg-gray-950/90 backdrop-blur-sm text-white text-xs rounded-md py-1.5 px-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 pointer-events-none"
+                    >
+                        Visit again for a new diagrammatic perspective
+                        <div className="absolute top-full right-3 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-gray-950/90"></div>
+                    </div>
+                </div>
+
+                <div className="w-px h-5 bg-gray-600"></div>
+
                 <button onClick={handleZoomIn} className="p-1.5 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md" aria-label="Zoom In">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3h-6" />

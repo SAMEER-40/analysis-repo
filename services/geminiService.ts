@@ -141,6 +141,7 @@ Binary files are typically compiled code, images, or other non-text formats.
         - **CRITICAL SYNTAX RULES:**
             - Use simple, alphanumeric node IDs (e.g., \`App\`, \`Home\`, \`FileTreeService\`).
             - Node labels MUST be quoted strings containing the file path (e.g., \`App["/components/App.tsx"]\`).
+            - Edge labels (text on arrows) MUST be a single, concise, quoted string. Example: \`A -- "sends data to" --> B\`. Do NOT use commas or multiple labels on a single edge.
             - If a diagram is not relevant for this file (e.g., a simple config file), write "No diagram needed for this file." instead of a mermaid block.
         - Enclose the final diagram in a \`\`\`mermaid\`\`\` code block.
     `;
